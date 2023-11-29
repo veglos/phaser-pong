@@ -1,0 +1,12 @@
+{
+  "name": "phaser-pong",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server -p 8080"
+  },
+  "dependencies": {
+    "@types/http-server": "^0.12.4",
+    "http-server": "^14.1.1",
+    "phaser": "^3.70.0"
+  }
+}
