@@ -8,5 +8,6 @@
     "@types/http-server": "^0.12.4",
     "http-server": "^14.1.1",
     "phaser": "^3.70.0"
-  }
+  },
+  "devDependencies": {}
 }
