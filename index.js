@@ -53,6 +53,14 @@ function create() {
   // Enable keyboard input
   this.upKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.K);
   this.downKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.J);
+
+  // Touch input
+  this.input.on("pointermove", function (pointer) {
+    if (pointer.isDown) {
+      // Move the player paddle to the pointer's Y position
+      playerPaddle.y = pointer.y;
+    }
+  });
 }
 
 function hitPaddle(ball, paddle) {
