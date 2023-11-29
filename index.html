@@ -9,7 +9,20 @@
     </style>
   </head>
   <body>
-    <script src="/node_modules/phaser/dist/phaser.js"></script>
+    <script>
+      const isDevelopment = window.location.host.startsWith("localhost");
+      if (window.isDevelopment) {
+        // Load Phaser from local node_modules for development
+        document.write(
+          '<script src="/node_modules/phaser/dist/phaser.js"><\/script>',
+        );
+      } else {
+        // Load Phaser from CDN for production
+        document.write(
+          '<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"><\/script>',
+        );
+      }
+    </script>
     <script src="index.js"></script>
   </body>
 </html>
